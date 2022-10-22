@@ -9,5 +9,19 @@ package oopassignment.actnow;
  * @author ZIXU
  */
 public class Settings {
+    boolean darkMode;
+    boolean colorBlindMode;
+    int fontSize;
     
+    public void toggleDarkMode(boolean toggle) {
+        darkMode = toggle;
+    }
+    
+    public void toggleColorBlindMode(boolean toggle) {
+        colorBlindMode = toggle;
+    }
+    
+    public void setFontSize(int size) {
+        fontSize = size;
+    }
 }
