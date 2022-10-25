@@ -13,6 +13,12 @@ public class Settings {
     boolean colorBlindMode;
     int fontSize;
     
+    public Settings(boolean darkMode, boolean colorBlindMode, int fontSize){
+        this.darkMode = darkMode;
+        this.colorBlindMode = colorBlindMode;
+        this.fontSize = fontSize;
+    }
+    
     public void toggleDarkMode(boolean toggle) {
         darkMode = toggle;
     }
