@@ -1,39 +1,118 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package oopassignment.actnow;
 
-/**
- *
- * @author ALDRICH
- */
-public class Feedback {
-    String feedTitle;
-    String feedContent;
-    String feedAuthor;
-    String feedReply;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class Feedback extends JFrame implements ActionListener {
     
-    public Feedback(String feedTitle, String feedContent, String feedAuthor, String feedReply) {
-        this.feedTitle = feedTitle;
-        this.feedContent = feedContent;
-        this.feedAuthor = feedAuthor;
-        this.feedReply = feedReply;
+    JButton submit;
+    JButton reset;
+    JTextField feedAuthor;
+    JTextField feedTitle;
+    JTextField feedContent;
+    Container cp;
+    JFrame f;
+    
+    public Feedback() {
+        
+        this.setTitle("Feedback Submission");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
+        this.setSize(540, 550);
+        cp = getContentPane();
+        this.setLayout(null);
+        this.cp.setBackground(new java.awt.Color(0xA6E3E9));
+        
+        JLabel labelhead = new JLabel();
+        labelhead.setText("FEEDBACK FORM");
+        labelhead.setFont(new Font("Arial", Font.BOLD, 40));
+        labelhead.setBounds(80,0,440,45);
+        this.cp.add(labelhead);
+        
+        JLabel labelauthor = new JLabel();
+        labelauthor.setText("Name: ");
+        labelauthor.setFont(new Font("Arial", Font.PLAIN, 18));
+        labelauthor.setBounds(50,60,80,28);
+        this.cp.add(labelauthor);
+        
+        feedAuthor = new JTextField();
+        feedAuthor.setFont(new Font("Arial", Font.PLAIN, 16));
+        feedAuthor.setBounds(230, 60, 240, 28);
+        this.cp.add(feedAuthor);
+        
+        JLabel labeltitle = new JLabel();
+        labeltitle.setText("Title: ");
+        labeltitle.setFont(new Font("Arial", Font.PLAIN, 18));
+        labeltitle.setBounds(50,110, 150, 28);
+        this.cp.add(labeltitle);
+        
+        feedTitle = new JTextField();
+        feedTitle.setFont(new Font("Arial", Font.PLAIN, 16));
+        feedTitle.setBounds(230, 110, 240, 28);
+        this.cp.add(feedTitle);
+
+        JLabel labelcontent = new JLabel();
+        labelcontent.setText("Content: ");
+        labelcontent.setFont(new Font("Arial", Font.PLAIN, 18));
+        labelcontent.setBounds(50,160,170,28);
+        this.cp.add(labelcontent);
+
+        feedContent = new JTextField();
+        feedContent.setFont(new Font("Arial", Font.PLAIN, 16));
+        feedContent.setBounds(230, 160, 240, 226);
+        this.cp.add(feedContent);
+        
+        submit= new JButton("Submit");
+        submit.setFont(new Font("Arial", Font.BOLD, 18));
+        submit.setBounds(165, 450, 100, 28);
+        submit.addActionListener(this);
+        this.cp.add(submit);
+        
+        reset= new JButton("Reset");
+        reset.setFont(new Font("Arial", Font.BOLD, 18));
+        reset.setBounds(275, 450, 100, 28);
+        reset.addActionListener(this);
+        this.cp.add(reset);
+
+        this.setVisible(true);
     }
     
-    public void setFeedTitle(String title) {
-        feedTitle = title;
-    }
-    
-    public void setFeedContent(String content) {
-        feedContent = content;
-    }
-    
-    public void setFeedAuthor(String author) {
-        feedAuthor = author;
-    }
-    
-    public void setFeedReply(String reply) {
-        feedReply = reply;
+    public void actionPerformed(ActionEvent e) {
+        
+        boolean flag = false;
+        f = new JFrame();
+        
+        if(e.getSource() == submit) {
+            
+            if((feedAuthor.getText().isEmpty()) || (feedAuthor.getText() == null)) {
+                JOptionPane.showMessageDialog(f, "Name must be filled.");
+            }
+            
+            else if((feedTitle.getText().isEmpty()) || (feedTitle.getText() == null)) {
+                JOptionPane.showMessageDialog(f, "Title must be filled.");
+            }
+            
+            else if((feedContent.getText().isEmpty()) || (feedContent.getText() == null)) {
+                JOptionPane.showMessageDialog(f, "Content must be filled.");
+            }
+            
+            else
+                flag = true; 
+                
+            if(flag) {
+                String text1 = "Thank You for Your Feedback!\n";
+                String text2 = "We Really Appreciate Your Opinions!\n\n";
+                String text3 = "Name: " + feedAuthor.getText() + "\nTitle: " + feedTitle.getText() + "\nFeedback: " + feedContent.getText();
+                String display = text1 + text2 + text3;
+                JOptionPane.showMessageDialog(f, display);
+            }
+        }
+
+        else if( e.getSource() == reset) {
+            feedAuthor.setText(null);
+            feedTitle.setText(null);
+            feedContent.setText(null);
+        }
     }
 }
