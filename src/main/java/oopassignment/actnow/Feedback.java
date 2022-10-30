@@ -22,7 +22,7 @@ public class Feedback extends JFrame implements ActionListener {
         this.setSize(540, 550);
         cp = getContentPane();
         this.setLayout(null);
-        this.cp.setBackground(new java.awt.Color(0xA6E3E9));
+        this.cp.setBackground(new java.awt.Color(0xE8DAEF));
         
         JLabel labelhead = new JLabel();
         labelhead.setText("FEEDBACK FORM");
@@ -63,13 +63,13 @@ public class Feedback extends JFrame implements ActionListener {
         feedContent.setBounds(230, 160, 240, 226);
         this.cp.add(feedContent);
         
-        submit= new JButton("Submit");
+        submit = new JButton("Submit");
         submit.setFont(new Font("Arial", Font.BOLD, 18));
         submit.setBounds(165, 450, 100, 28);
         submit.addActionListener(this);
         this.cp.add(submit);
         
-        reset= new JButton("Reset");
+        reset = new JButton("Reset");
         reset.setFont(new Font("Arial", Font.BOLD, 18));
         reset.setBounds(275, 450, 100, 28);
         reset.addActionListener(this);
