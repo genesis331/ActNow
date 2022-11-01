@@ -14,10 +14,9 @@ public class MainUIUserController {
 
     @FXML
     protected void readMoreBtnClick() throws IOException {
-        Stage stage = (Stage) mainUserPane.getScene().getWindow();
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("readinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.close();
         stage.setTitle("Read Information");
         stage.setScene(scene);
         stage.show();

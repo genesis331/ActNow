@@ -14,10 +14,9 @@ public class MainUIAdminController {
 
     @FXML
     protected void modifyBtnClick() throws IOException {
-        Stage stage = (Stage) mainAdminPane.getScene().getWindow();
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("readinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.close();
         stage.setTitle("Read Information");
         stage.setScene(scene);
         stage.show();
@@ -25,10 +24,9 @@ public class MainUIAdminController {
 
     @FXML
     protected void readFeedbackBtnClick() throws IOException {
-        Stage stage = (Stage) mainAdminPane.getScene().getWindow();
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("readfeedback-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.close();
         stage.setTitle("Read Feedback (Admin-only)");
         stage.setScene(scene);
         stage.show();
