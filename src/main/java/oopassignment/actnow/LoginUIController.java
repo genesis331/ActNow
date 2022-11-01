@@ -1,14 +1,17 @@
 package oopassignment.actnow;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class LoginUIController {
     @FXML
-    private Label welcomeText;
+    private TextField usernameField;
+    @FXML
+    private TextField passwordField;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    protected void loginBtnClick() {
+        System.out.println("Username: " + usernameField.getText());
+        System.out.println("Password: " + passwordField.getText());
     }
 }
