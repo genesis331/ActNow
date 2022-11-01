@@ -11,7 +11,7 @@ public class MainUIUser extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainUIUser.class.getResource("mainuser-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 550, 620);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Home Screen (User)");
         stage.setScene(scene);
         stage.show();

@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainUIAdmin extends Application {
+public class ReadInformationUI extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainUIAdmin.class.getResource("mainadmin-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ReadInformationUI.class.getResource("readinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Home Screen (Admin)");
+        stage.setTitle("Read Information");
         stage.setScene(scene);
         stage.show();
     }
