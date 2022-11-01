@@ -89,9 +89,9 @@
                            <font>
                               <Font name="Montserrat Medium" size="14.0" />
                            </font></Label>
-                        <ImageView fitWidth="7.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@chevron-right.png" />
+                              <Image url="@log-in.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="30.0" />

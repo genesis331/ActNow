@@ -65,9 +65,9 @@
                            </HBox.margin></TextField>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: black;">
                            <graphic>
-                              <ImageView fitHeight="7.0" fitWidth="7.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@chevron-right.png" />
+                                    <Image url="@search.png" />
                                  </image>
                               </ImageView>
                            </graphic></Button>
