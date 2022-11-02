@@ -15,9 +15,19 @@ public class MainUIAdminController {
     @FXML
     protected void modifyBtnClick() throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("readinformation-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("editinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Read Information");
+        stage.setTitle("Edit Information (Admin-only)");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void createNewBtnClick() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("createinformation-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("Create Information (Admin-only)");
         stage.setScene(scene);
         stage.show();
     }

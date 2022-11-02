@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="createInformationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopassignment.actnow.CreateInformationUIController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="204.0" minHeight="6.0" percentHeight="18.0" prefHeight="64.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="336.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="80.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Welcome Admin! ">
+                     <font>
+                        <Font name="Montserrat Medium" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Create New Guide">
+                     <font>
+                        <Font name="Montserrat ExtraBold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Circle fill="#dddddd" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+          <content>
+              <VBox prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                  <VBox layoutX="10.0" layoutY="10.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Disaster Category:" />
+                        <TextField />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="25.0" left="35.0" right="35.0" top="25.0" />
+                     </padding>
+                  </VBox>
+                      <VBox prefWidth="100.0">
+                          <children>
+                              <Label text="Title: " />
+                              <TextField />
+                          </children>
+                          <opaqueInsets>
+                              <Insets />
+                          </opaqueInsets>
+                          <padding>
+                              <Insets bottom="25.0" left="35.0" right="35.0" />
+                          </padding>
+                      </VBox>
+                      <VBox layoutX="10.0" layoutY="10.0" prefWidth="100.0">
+                          <children>
+                              <Label text="Content: " />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" />
+                          </children>
+                          <padding>
+                              <Insets bottom="25.0" left="35.0" right="35.0" />
+                          </padding>
+                      </VBox>
+                      <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                          <children>
+                              <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" text="Cancel">
+                                  <HBox.margin>
+                                      <Insets left="5.0" right="5.0" />
+                                  </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Submit">
+                                  <HBox.margin>
+                                      <Insets left="5.0" right="5.0" />
+                                  </HBox.margin>
+                              </Button>
+                          </children>
+                          <padding>
+                              <Insets left="35.0" right="35.0" />
+                          </padding>
+                      </HBox>
+                  </children>
+              </VBox>
+          </content></ScrollPane>
+   </children>
+</GridPane>
