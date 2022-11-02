@@ -12,7 +12,7 @@
   </columnConstraints>
   <rowConstraints>
     <RowConstraints vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" percentHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <GridPane alignment="CENTER" prefHeight="118.0" prefWidth="616.0" vgap="10.0">
@@ -104,15 +104,22 @@
                         </HBox>
                      </graphic>
                   </Button>
-                  <HBox alignment="CENTER">
+                  <VBox alignment="TOP_CENTER" prefWidth="100.0">
                      <children>
-                        <Label text="Don't have an account? " />
-                        <Hyperlink text="Click here to Sign Up" />
+                        <Label text="Don't have an account? ">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink onAction="#signUpBtnClick" text="Click here to Sign Up">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font></Hyperlink>
                      </children>
                      <padding>
-                        <Insets top="7.0" />
+                        <Insets top="15.0" />
                      </padding>
-                  </HBox>
+                  </VBox>
                </children>
             </VBox>
          </children>

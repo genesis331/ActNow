@@ -3,7 +3,6 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 
@@ -34,11 +33,6 @@
                <padding>
                   <Insets left="35.0" />
                </padding>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Circle fill="#dddddd" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-               </children>
             </VBox>
          </children>
       </HBox>

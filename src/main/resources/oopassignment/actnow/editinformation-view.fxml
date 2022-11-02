@@ -3,7 +3,6 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <GridPane fx:id="editInformationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopassignment.actnow.EditInformationUIController">
@@ -34,11 +33,6 @@
                   <Insets left="35.0" />
                </padding>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Circle fill="#dddddd" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-               </children>
-            </VBox>
          </children>
       </HBox>
       <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -47,7 +41,10 @@
                   <children>
                       <VBox layoutX="10.0" layoutY="10.0" prefWidth="100.0">
                           <children>
-                              <Label text="Disaster Category:" />
+                              <Label text="Disaster Category:">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font></Label>
                         <TextField />
                           </children>
                           <opaqueInsets>
@@ -59,7 +56,10 @@
                       </VBox>
                       <VBox prefWidth="100.0">
                           <children>
-                              <Label text="Title: " />
+                              <Label text="Title: ">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font></Label>
                               <TextField />
                           </children>
                           <opaqueInsets>
@@ -71,7 +71,10 @@
                       </VBox>
                       <VBox layoutX="10.0" layoutY="10.0" prefWidth="100.0">
                           <children>
-                              <Label text="Content: " />
+                              <Label text="Content: ">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font></Label>
                               <TextArea prefHeight="200.0" prefWidth="200.0" />
                           </children>
                           <padding>
@@ -81,16 +84,25 @@
                       <HBox alignment="CENTER_LEFT" prefWidth="200.0">
                           <children>
                               <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" />
-                              <Button mnemonicParsing="false" text="Cancel">
+                              <Button mnemonicParsing="false" style="-fx-background-color: black;" text="Cancel" textFill="WHITE">
                                   <HBox.margin>
                                       <Insets left="5.0" right="5.0" />
                                   </HBox.margin>
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
                               </Button>
-                        <Button layoutX="567.0" layoutY="10.0" mnemonicParsing="false" text="Delete" />
-                              <Button mnemonicParsing="false" text="Save">
+                        <Button layoutX="567.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font></Button>
+                              <Button mnemonicParsing="false" style="-fx-background-color: black;" text="Save" textFill="WHITE">
                                   <HBox.margin>
                                       <Insets left="5.0" right="5.0" />
                                   </HBox.margin>
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
                               </Button>
                           </children>
                           <padding>

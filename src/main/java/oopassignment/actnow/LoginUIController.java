@@ -32,4 +32,15 @@ public class LoginUIController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    protected void signUpBtnClick() throws IOException {
+        Stage stage = (Stage) loginPane.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("register-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 430, 500);
+        stage.close();
+        stage.setTitle("Sign Up for ActNow");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
