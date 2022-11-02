@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.mycompany.informationcode;
+package oopassignment.actnow;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -46,7 +46,7 @@ public class InformationCode {
         System.out.println("Enter new info");
   String text = inner.nextLine();
   try {
-        FileWriter fWriter = new FileWriter(); // add file link here i try add mine but got weird error 
+        FileWriter fWriter = new FileWriter("guides/test.txt"); // add file link here i try add mine but got weird error
         fWriter.write(text);
         System.out.println(text);
         fWriter.close();
@@ -62,7 +62,7 @@ public class InformationCode {
     public void setInfoView(String view) throws Exception{
        InfoView = view;
        InfoView = InfoView.trim();
-       File infofile = new File (); // add file link here i try mine got weird error
+       File infofile = new File ("guides/blizzard-protectyourfamily.md"); // add file link here i try mine got weird error
        Scanner sc = new Scanner(infofile);
        
        while (sc.hasNextLine())
@@ -82,14 +82,16 @@ public class InformationCode {
         System.out.println("Edit file?");
         
         try{
-            Fst = new FileWriter("",true); // file name here
+            Fst = new FileWriter("guides/test.txt",true); // file name here
             Snd = new BufferedWriter(Fst);
             Trd = new PrintWriter(Snd);
             Trd.println("DM");
             
             System.out.println("Info is succefully edited into file");
             Trd.flush();
-        }finally {
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
             try{
                 Trd.close();
                 Snd.close();
@@ -107,5 +109,4 @@ public class InformationCode {
     }   
   
 };
-    }
 
