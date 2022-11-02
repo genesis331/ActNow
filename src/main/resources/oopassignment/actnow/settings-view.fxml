@@ -59,7 +59,7 @@
                            <graphic>
                               <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@edit.png" />
+                                    <Image url="@x.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -80,7 +80,7 @@
                            <graphic>
                               <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@edit.png" />
+                                    <Image url="@x.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -101,7 +101,7 @@
                            <graphic>
                               <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@edit.png" />
+                                    <Image url="@x.png" />
                                  </image>
                               </ImageView>
                            </graphic>

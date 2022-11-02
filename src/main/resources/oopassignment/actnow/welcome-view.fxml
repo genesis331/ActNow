@@ -55,7 +55,7 @@
             </ImageView>
          </children>
       </GridPane>
-      <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#getStartedBtnClick" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: black; -fx-label-padding: 5 12 5 12;" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#getStartedBtnClick" prefHeight="48.0" prefWidth="180.0" style="-fx-background-color: SLATEBLUE; -fx-label-padding: 5 12 5 12;" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

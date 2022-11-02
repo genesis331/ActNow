@@ -16,6 +16,20 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/18.0.1/javafx-fxml-18.0.1-win.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/18.0.1/javafx-fxml-18.0.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.5.0/formsfx-core-11.5.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:18.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:18.0.1" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.3.1" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-core:12.3.1" />
+      <element id="library" level="project" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:11.1.1" />
+      <element id="library" level="project" name="Maven: org.commonmark:commonmark:0.20.0" />
+      <element id="library" level="project" name="Maven: com.dlsc.formsfx:formsfx-core:11.5.0" />
     </root>
   </artifact>
 </component>
