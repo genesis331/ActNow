@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package oopassignment.actnow;
+package com.mycompany.informationcode;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +14,9 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.FileNotFoundException;
+
 
 
 
@@ -40,13 +43,16 @@ public class InformationCode {
         
     }
     
+    
+    
+    
     public void setInfoAdd(String add) throws IOException {
         InfoAdd= add;
         InfoAdd = InfoAdd.trim();
         System.out.println("Enter new info");
   String text = inner.nextLine();
   try {
-        FileWriter fWriter = new FileWriter("guides/test.txt"); // add file link here i try add mine but got weird error
+        FileWriter fWriter = new FileWriter(); // add file link here i try add mine but got weird error 
         fWriter.write(text);
         System.out.println(text);
         fWriter.close();
@@ -59,10 +65,13 @@ public class InformationCode {
            
     }
     
+    
+    
+    
     public void setInfoView(String view) throws Exception{
        InfoView = view;
        InfoView = InfoView.trim();
-       File infofile = new File ("guides/blizzard-protectyourfamily.md"); // add file link here i try mine got weird error
+       File infofile = new File (); // add file link here i try mine got weird error
        Scanner sc = new Scanner(infofile);
        
        while (sc.hasNextLine())
@@ -70,7 +79,12 @@ public class InformationCode {
        
     }
     
-    public void setInfoEdit(String edit) {
+    
+    
+    
+    
+    
+    public String setInfoEdit(String edit) throws IOException {
         InfoEdit = edit;
         InfoEdit = InfoEdit.trim();
         Scanner Editorial = new Scanner(System.in);
@@ -79,19 +93,17 @@ public class InformationCode {
         FileWriter Fst = null;
         BufferedWriter Snd = null;
         PrintWriter Trd = null;
-        System.out.println("Edit file?");
+        System.out.println("Edit file here");
         
         try{
-            Fst = new FileWriter("guides/test.txt",true); // file name here
+            Fst = new FileWriter("",true); // file name here
             Snd = new BufferedWriter(Fst);
             Trd = new PrintWriter(Snd);
             Trd.println("DM");
             
             System.out.println("Info is succefully edited into file");
             Trd.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
+        }finally {
             try{
                 Trd.close();
                 Snd.close();
@@ -100,13 +112,44 @@ public class InformationCode {
                        
             }
         }
-            
-            
-            
-            
-            
+        
+// THIS BELOW HERE IS SIMILAR TO THE TOP EDIT FUNCTION. THE BOTTOM ONE SHOULD WORK BETTER IF IM NOT MISTAKEN.
+public String setInfoEdit(String edit) throws IOException {
+        InfoEdit = edit;
+        InfoEdit = InfoEdit.trim();
+        String Pathfinder = "txt.file" // add file here
+        Scanner sc = new Scanner(new File(Pathfinder));
+        StringBuffer buffer = new StringBuffer();
+        while(sc.hasNextLine()){
+            buffer.append(sc,nextLine()+System.lineSeparator());
         }
-    }   
+        String fileCont = buffer.toString();
+        System.out.println("Contents" +fileCont);
+        sc.close();
+        System.out.println("Type which line you want to replace ");
+        String Replacement = inner.nextLine();
+        String Old = Replacement;
+        System.out.println("Write what you want to add here");
+        String Replacer = inner.nextLine();
+        String New = inner.nextLine();
+        fileContents = fileContents.replaceAll(Old,New);
+        FileWriter writer = new FileWriter(Pathfinder);
+        System.out.println("");
+        System.out.println("new info : "+fileContents);
+        writer.append(fileContents);
+        writer.flush();
+       
+    
+    
+
+    
+    
+ 
+        
+            
+            
+            
   
-};
+
+    
 
