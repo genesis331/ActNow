@@ -131,7 +131,7 @@ public String setInfoEdit(String edit) throws IOException {
         String Old = Replacement;
         System.out.println("Write what you want to add here");
         String Replacer = inner.nextLine();
-        String New = inner.nextLine();
+        String New = Replacer;
         fileContents = fileContents.replaceAll(Old,New);
         FileWriter writer = new FileWriter(Pathfinder);
         System.out.println("");
