@@ -34,7 +34,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <Label text="Hurricane - How to Evacuate" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Label fx:id="downloadLabel" text="?" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Montserrat SemiBold" size="20.0" />
                </font>

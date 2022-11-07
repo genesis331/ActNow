@@ -37,8 +37,8 @@ public class MainUIUserController {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("shareinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 430, 500);
-//        ReadInformationUIController controller = fxmlLoader.getController();
-//        controller.setContent(filename);
+        ShareInformationUIController controller = fxmlLoader.getController();
+        controller.setContent(filename);
         stage.setTitle("Share Information");
         stage.setScene(scene);
         stage.show();
