@@ -1,4 +1,5 @@
 # How to survive a drought
+Drought
 
 Drought is defined as a lengthy period of exceptionally low rainfall, resulting in a water scarcity. 
 

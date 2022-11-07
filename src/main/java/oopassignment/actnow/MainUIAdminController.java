@@ -3,6 +3,7 @@ package oopassignment.actnow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -11,6 +12,9 @@ import java.io.IOException;
 public class MainUIAdminController {
     @FXML
     private GridPane mainAdminPane;
+
+    @FXML
+    private ListView loopPane;
 
     @FXML
     protected void modifyBtnClick() throws IOException {
@@ -40,5 +44,18 @@ public class MainUIAdminController {
         stage.setTitle("Read Feedback (Admin-only)");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    protected void initialize() throws IOException {
+        for (int i = 0; i < MainforUser.getGuideCount(); i++) {
+            FXMLLoader loader = new FXMLLoader(LoginUI.class.getResource("component-adminguide.fxml"));
+            GridPane stockView = loader.load();
+            GuideAdminComponentController controller = loader.getController();
+            controller.setDisasterType(MainforUser.getGuideType(i));
+            controller.setGuideTitle(MainforUser.getGuideTitle(i));
+            controller.setActionBtn(MainforUser.getGuideFilename(i));
+            loopPane.getItems().add(stockView);
+        }
     }
 }

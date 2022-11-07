@@ -1,4 +1,5 @@
 # Effects of Drought
+Drought
 
 ## Water
 Reduced river and stream flows can raise water pollution levels and induce stagnation. Lower oxygen levels are caused by warmer lake and reservoir water. Fish, other aquatic life, and water quality may be impacted at these levels. Wildfires brought on by a drought can cause runoff to contain more silt, ash, charcoal, and woody debris that can endanger fish and other aquatic life by lowering oxygen levels in the water. Over time, groundwater resources are not restored at a usual pace due to decreased precipitation and increasing surface water evaporation.

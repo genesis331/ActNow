@@ -1,4 +1,5 @@
 # What to Do When a Wildfire Approaches
+Wildfire
 
 ## 1.	Listen to emergency officials.
 If they say evacuate, leave your home immediately.

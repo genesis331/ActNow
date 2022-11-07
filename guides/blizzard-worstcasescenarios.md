@@ -1,4 +1,5 @@
 # Worst-case scenarios
+Blizzard
 
 - Try to find shelter: Also, attempt to stay dry and cover all of your body.
     - Can't find shelter? See if you can make a lean-to, windbreak or snow cave for protection from the wind. Try to set a fire. If there are rocks nearby, put those around the fire to retain heat. Global Rescue says even low-hanging tree branches could provide some protection.

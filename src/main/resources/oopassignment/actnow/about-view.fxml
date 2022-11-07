@@ -32,7 +32,7 @@
                               <Font name="Montserrat ExtraBold" size="20.0" />
                            </font>
                         </Label>
-                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula sed dui tempus mollis. Vestibulum odio nunc, sollicitudin condimentum arcu id, posuere sollicitudin leo. Cras mollis nulla vitae tellus rhoncus pellentesque." textAlignment="CENTER" wrapText="true">
+                        <Label text="We are introducing our very own app, ActNow that focuses on spreading awareness about climate change, enabling the users to understand how to survive, evacuate &amp; even the effects of climate change on health. " textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Montserrat Regular" size="12.0" />
                            </font>

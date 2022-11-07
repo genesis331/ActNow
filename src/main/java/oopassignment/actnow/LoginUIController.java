@@ -20,17 +20,10 @@ public class LoginUIController {
 
     @FXML
     protected void loginBtnClick() throws IOException {
-//        JFrame f = new JFrame();
-//        JOptionPane.showMessageDialog(f,"Wrong username or password!");
         System.out.println("Username: " + usernameField.getText());
         System.out.println("Password: " + passwordField.getText());
         Stage stage = (Stage) loginPane.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.close();
-        stage.setTitle("Home Screen (User)");
-        stage.setScene(scene);
-        stage.show();
+        LoginPage.validateLogin(usernameField.getText(), passwordField.getText(), stage);
     }
 
     @FXML

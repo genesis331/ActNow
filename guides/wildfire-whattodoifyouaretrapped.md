@@ -1,4 +1,5 @@
 # What to Do If You Are Trapped During a Wildfire
+Wildfire
 
 In the event that an evacuation is not issued but there are heavy smoke conditions, stay inside or seek a safer location. If for some reason, you do not leave your area and the fire has trapped you in your home or school building, do the following:
 

@@ -1,4 +1,5 @@
 # Road Trips
+Blizzard
 
 Make sure you have fully stocked safety kit before you head out. Muccilli said the kit should include:
 - A survival blanket

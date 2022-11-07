@@ -1,4 +1,5 @@
 # How to Survive
+Hurricane
 
 If you didn't manage to evacuate, follow these guidelines: 
 - Stay indoors and away from windows and glass doors.

@@ -111,7 +111,7 @@
                               <Font name="Montserrat Regular" size="12.0" />
                            </font>
                         </Label>
-                        <Hyperlink onAction="#signUpBtnClick" text="Click here to Sign Up">
+                        <Hyperlink disable="true" onAction="#signUpBtnClick" text="Click here to Sign Up">
                            <font>
                               <Font name="Montserrat Regular" size="12.0" />
                            </font></Hyperlink>

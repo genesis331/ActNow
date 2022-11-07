@@ -1,16 +1,17 @@
 
 package oopassignment.actnow;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.HashMap;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 
 public class LoginPage implements ActionListener{
@@ -22,7 +23,7 @@ public class LoginPage implements ActionListener{
 	JLabel userIDLabel = new JLabel("UserID:");
 	JLabel userPasswordLabel = new JLabel("Password:");
 	JLabel messageLabel = new JLabel();
-	HashMap<String,String> logininfo = new HashMap<String,String>();
+	static HashMap<String,String> logininfo = new HashMap<String,String>();
 	
 	LoginPage(HashMap<String,String> loginInfoOriginal){
 		logininfo = loginInfoOriginal;
@@ -139,6 +140,36 @@ public class LoginPage implements ActionListener{
 		frame.setLayout(null);
 		frame.setVisible(true);
         }
+
+		public static void validateLogin(String userID, String password, Stage primaryStage) throws IOException {
+			if(logininfo.containsKey(userID)) {
+				if(logininfo.get(userID).equals(password)) {
+					if("ADMINISTRATOR".equals(userID)){
+						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
+						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+						primaryStage.close();
+						primaryStage.setTitle("Home Screen (User)");
+						primaryStage.setScene(scene);
+						primaryStage.show();
+					}
+					if("GUEST".equals(userID)){
+						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
+						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+						primaryStage.close();
+						primaryStage.setTitle("Home Screen (User)");
+						primaryStage.setScene(scene);
+						primaryStage.show();
+					}
+					else {
+						JFrame f = new JFrame();
+        				JOptionPane.showMessageDialog(f,"Wrong password / Username");
+					}
+				}
+			} else {
+				JFrame f = new JFrame();
+				JOptionPane.showMessageDialog(f,"Wrong password / Username");
+			}
+		}
 }
 
 
