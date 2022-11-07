@@ -3,6 +3,10 @@ package oopassignment.actnow;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class Feedback extends JFrame implements ActionListener {
     
@@ -113,6 +117,32 @@ public class Feedback extends JFrame implements ActionListener {
             feedAuthor.setText(null);
             feedTitle.setText(null);
             feedContent.setText(null);
+        }
+    }
+
+    public static int getFeedbackCount() throws FileNotFoundException {
+        File folder = new File("feedbacks");
+        File[] listOfFiles = folder.listFiles();
+        return Objects.requireNonNull(listOfFiles).length;
+    }
+    public static String getFeedbackFilename(int index) throws FileNotFoundException {
+        File folder = new File("feedbacks");
+        File[] listOfFiles = folder.listFiles();
+        assert listOfFiles != null;
+        return listOfFiles[index].getName();
+    }
+
+    public static String getFeedbackTitle(int index) throws FileNotFoundException {
+        File folder = new File("feedbacks");
+        File[] listOfFiles = folder.listFiles();
+
+        assert listOfFiles != null;
+        if (listOfFiles[index].isFile()) {
+            String filename = listOfFiles[index].getName();
+            Scanner scanner = new Scanner(new File("feedbacks/" + filename));
+            return scanner.nextLine();
+        } else {
+            return null;
         }
     }
 }

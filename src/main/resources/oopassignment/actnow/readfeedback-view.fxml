@@ -59,7 +59,7 @@
                   </VBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                      <children>
-                        <Button contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: yellowgreen;" text="Resolve" textFill="WHITE">
+                        <Button onAction="#resolveBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: yellowgreen;" text="Resolve" textFill="WHITE">
                            <font>
                               <Font name="Montserrat Regular" size="12.0" />
                            </font>
