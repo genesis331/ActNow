@@ -1,3 +1,0 @@
-Feedback Title Here
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue, eros vel fermentum congue, nunc enim efficitur arcu, ac varius neque justo at velit. Integer lobortis turpis at risus laoreet molestie. Praesent quis ante sit amet nunc fermentum auctor. Cras pellentesque venenatis felis, sed gravida lacus finibus ac. Nullam convallis, mi ac auctor dignissim, tortor risus egestas orci, non suscipit purus leo eu dui. Nam a velit pretium quam mollis fringilla eget eget nulla. Praesent egestas risus quis enim consequat porta. Etiam interdum neque ullamcorper purus semper, semper fringilla ante vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent eget metus sem.

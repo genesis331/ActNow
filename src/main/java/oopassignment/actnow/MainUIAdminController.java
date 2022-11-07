@@ -25,6 +25,8 @@ public class MainUIAdminController {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("editinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        EditInformationUIController controller = fxmlLoader.getController();
+        controller.setContent(filename);
         stage.setTitle("Edit Information (Admin-only)");
         stage.setScene(scene);
         stage.show();

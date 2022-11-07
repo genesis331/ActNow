@@ -13,6 +13,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -31,7 +32,15 @@ public class EditInformationUIController {
 
     @FXML
     public void setContent(String filename) throws IOException {
-
+        File targetFile = new File("guides/" + filename);
+        Scanner scanner = new Scanner(targetFile);
+        String title = scanner.nextLine().substring(2);
+        String disaster = scanner.nextLine();
+        scanner.nextLine();
+        String body = scanner.useDelimiter("\\Z").next();
+        titleField.setText(title);
+        disasterField.setText(disaster);
+        bodyField.setText(body);
     }
 
     @FXML
@@ -40,6 +49,13 @@ public class EditInformationUIController {
         System.out.println("Disaster: " + disasterField.getText());
         System.out.println("Title: " + titleField.getText());
         System.out.println("Content: " + bodyField.getText());
+
+        String disasterTypeName = disasterField.getText().replaceAll("\\s+","").toLowerCase();
+        String titleName = titleField.getText().replaceAll("\\s+","").toLowerCase();
+
+        try (PrintWriter out = new PrintWriter("guides/" + disasterTypeName + "-" + titleName + ".md")) {
+            out.println("# " + titleField.getText() + "\n" + disasterField.getText() + "\n\n" + bodyField.getText());
+        }
 
         JOptionPane.showMessageDialog(f, "Info is successfully edited into file");
 

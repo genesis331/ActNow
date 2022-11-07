@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class CreateFeedbackUIController {
     @FXML
@@ -38,6 +39,17 @@ public class CreateFeedbackUIController {
             String text2 = "We Really Appreciate Your Opinions!\n\n";
             String text3 = "Name: " + "User" + "\nTitle: " + titleField.getText() + "\nFeedback: " + bodyField.getText();
             String display = text1 + text2 + text3;
+
+            StringBuilder randomString = new StringBuilder();
+            for (int i = 0; i < 10; i++) {
+                int randomInt = (int) (Math.random() * 26 + 97);
+                randomString.append((char) randomInt);
+            }
+
+            try (PrintWriter out = new PrintWriter("feedbacks/" + randomString + ".txt")) {
+                out.println(titleField.getText() + "\n\n" + bodyField.getText());
+            }
+
             JOptionPane.showMessageDialog(f, display);
 
             Stage stage = (Stage) createFeedbackPane.getScene().getWindow();
