@@ -1,6 +1,7 @@
 package oopassignment.actnow;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -12,10 +13,10 @@ public class ReadFeedbackUIController {
     private GridPane readFeedbackPane;
 
     @FXML
-    private TextField titleField;
+    private Label titleField;
 
     @FXML
-    private TextArea bodyField;
+    private Label bodyField;
 
     @FXML
     public void setContent(String filename) throws IOException {

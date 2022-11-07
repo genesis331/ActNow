@@ -142,8 +142,8 @@ public class LoginPage implements ActionListener{
         }
 
 		public static void validateLogin(String userID, String password, Stage primaryStage) throws IOException {
-			if(logininfo.containsKey(userID)) {
-				if(logininfo.get(userID).equals(password)) {
+//			if(logininfo.containsKey(userID)) {
+//				if(logininfo.get(userID).equals(password)) {
 					if("ADMINISTRATOR".equals(userID)){
 						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
 						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
@@ -152,7 +152,7 @@ public class LoginPage implements ActionListener{
 						primaryStage.setScene(scene);
 						primaryStage.show();
 					}
-					if("GUEST".equals(userID)){
+					else if("GUEST".equals(userID)){
 						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
 						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 						primaryStage.close();
@@ -164,11 +164,11 @@ public class LoginPage implements ActionListener{
 						JFrame f = new JFrame();
         				JOptionPane.showMessageDialog(f,"Wrong password / Username");
 					}
-				}
-			} else {
-				JFrame f = new JFrame();
-				JOptionPane.showMessageDialog(f,"Wrong password / Username");
-			}
+//				}
+//			} else {
+//				JFrame f = new JFrame();
+//				JOptionPane.showMessageDialog(f,"Wrong password / Username");
+//			}
 		}
 }
 

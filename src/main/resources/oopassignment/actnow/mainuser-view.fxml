@@ -32,6 +32,40 @@
                   </Label>
                </children>
             </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0">
+               <children>
+                  <Button onAction="#aboutBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: gray;">
+                     <graphic>
+                        <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@info.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></VBox>
+            <VBox alignment="CENTER" layoutX="642.0" layoutY="10.0" prefHeight="200.0">
+               <children>
+                  <Button onAction="#profileBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: lightgray;">
+                     <graphic>
+                        <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
          </children>
          <padding>
             <Insets left="35.0" right="35.0" />
@@ -41,7 +75,7 @@
          <children>
             <VBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="201.0">
                <children>
-                  <Label text="7 Records Found">
+                  <Label fx:id="recordNum" text="0 Record(s) Found">
                      <font>
                         <Font name="Montserrat Regular" size="12.0" />
                      </font></Label>

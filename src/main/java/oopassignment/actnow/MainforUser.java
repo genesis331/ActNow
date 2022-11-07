@@ -34,6 +34,11 @@ public class MainforUser {
         
     }
 
+    public static boolean checkGuides() {
+        File folder = new File("guides");
+        return folder.exists();
+    }
+
     public static int getGuideCount() throws FileNotFoundException {
         File folder = new File("guides");
         File[] listOfFiles = folder.listFiles();

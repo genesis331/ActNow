@@ -16,6 +16,9 @@ public class GuideUserComponentController {
     @FXML
     private Button actionBtn;
 
+    @FXML
+    private Button shareBtn;
+
     public void setDisasterType(String type) {
         disasterType.setText(type);
     }
@@ -28,6 +31,16 @@ public class GuideUserComponentController {
         actionBtn.setOnAction(e -> {
             try {
                 MainUIUserController.readMoreBtnClick(filename);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+    }
+
+    public void setShareBtn(String filename) {
+        shareBtn.setOnAction(e -> {
+            try {
+                MainUIUserController.shareBtnClick(filename);
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

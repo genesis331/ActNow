@@ -3,6 +3,7 @@ package oopassignment.actnow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -17,7 +18,10 @@ public class MainUIAdminController {
     private ListView loopPane;
 
     @FXML
-    protected void modifyBtnClick() throws IOException {
+    private Label recordNum;
+
+    @FXML
+    protected static void modifyBtnClick(String filename) throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("editinformation-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
@@ -47,7 +51,28 @@ public class MainUIAdminController {
     }
 
     @FXML
+    protected void aboutBtnClick() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("about-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 350, 520);
+        stage.setTitle("About ActNow");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void profileBtnClick() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("profile-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("User Profile");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     protected void initialize() throws IOException {
+        recordNum.setText(MainforUser.getGuideCount() + " record(s) found");
         for (int i = 0; i < MainforUser.getGuideCount(); i++) {
             FXMLLoader loader = new FXMLLoader(LoginUI.class.getResource("component-adminguide.fxml"));
             GridPane stockView = loader.load();

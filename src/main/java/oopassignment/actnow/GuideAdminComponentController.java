@@ -27,7 +27,7 @@ public class GuideAdminComponentController {
     public void setActionBtn(String filename) {
         actionBtn.setOnAction(e -> {
             try {
-                MainUIUserController.readMoreBtnClick(filename);
+                MainUIAdminController.modifyBtnClick(filename);
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

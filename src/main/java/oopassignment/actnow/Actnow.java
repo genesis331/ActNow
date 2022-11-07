@@ -18,6 +18,7 @@ import java.io.IOException;
 public class Actnow {
     public static void main (String[] args) {
         Platform.startup(() -> {
+            System.out.println("Guides status: " + MainforUser.checkGuides());
             FXMLLoader fxmlLoader = new FXMLLoader(WelcomeUI.class.getResource("welcome-view.fxml"));
             Scene scene = null;
             try {
