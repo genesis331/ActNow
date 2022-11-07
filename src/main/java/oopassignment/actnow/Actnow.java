@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package oopassignment.actnow;
 
 import javafx.application.Platform;
@@ -11,10 +7,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- *
- * @author ZIXU
- */
 public class Actnow {
     public static void main (String[] args) {
         Platform.startup(() -> {

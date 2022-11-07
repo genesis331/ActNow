@@ -7,7 +7,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-//import javax.swing.*;
 import java.io.IOException;
 
 public class LoginUIController {
