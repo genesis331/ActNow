@@ -41,7 +41,7 @@
             <graphic>
                 <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@book-open.png" />
+                        <Image url="@icon-img/book-open.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -58,7 +58,7 @@
          <graphic>
             <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@share-2.png" />
+                  <Image url="@icon-img/share-2.png" />
                </image>
             </ImageView>
          </graphic>

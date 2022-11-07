@@ -50,7 +50,7 @@
          <children>
             <ImageView fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <image>
-                  <Image url="@landing-pic.png" />
+                  <Image url="@icon-img/landing-pic.png" />
                </image>
             </ImageView>
          </children>
@@ -69,7 +69,7 @@
                   </Label>
                   <ImageView fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@arrow-right-circle.png" />
+                        <Image url="@icon-img/arrow-right-circle.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="30.0" />

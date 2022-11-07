@@ -94,7 +94,7 @@
                               </Label>
                               <ImageView fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@log-in.png" />
+                                    <Image url="@icon-img/log-in.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="30.0" />

@@ -65,7 +65,7 @@
                            <graphic>
                               <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@send.png" />
+                                    <Image url="@icon-img/send.png" />
                                  </image>
                               </ImageView>
                            </graphic>

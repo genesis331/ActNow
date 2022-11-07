@@ -30,7 +30,7 @@
                      <children>
                         <ImageView fitHeight="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@user.png" />
+                              <Image url="@icon-img/user.png" />
                            </image>
                         </ImageView>
                         <VBox alignment="CENTER_LEFT">
@@ -70,7 +70,7 @@
                            <graphic>
                               <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@edit-2.png" />
+                                    <Image url="@icon-img/edit-2.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -87,7 +87,7 @@
                            <graphic>
                               <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@log-out.png" />
+                                    <Image url="@icon-img/log-out.png" />
                                  </image>
                               </ImageView>
                            </graphic>

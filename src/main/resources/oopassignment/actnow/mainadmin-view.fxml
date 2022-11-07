@@ -41,7 +41,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@plus.png" />
+                              <Image url="@icon-img/plus.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -62,7 +62,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@mail.png" />
+                              <Image url="@icon-img/mail.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -83,7 +83,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@info.png" />
+                              <Image url="@icon-img/info.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -105,7 +105,7 @@
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@user.png" />
+                              <Image url="@icon-img/user.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -144,7 +144,7 @@
                   <graphic>
                     <ImageView fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@search.png" />
+                        <Image url="@icon-img/search.png" />
                       </image>
                     </ImageView>
                   </graphic></Button>
