@@ -77,6 +77,11 @@ public class MainUIAdminController {
     }
 
     @FXML
+    protected void searchBtnClick() throws IOException {
+
+    }
+
+    @FXML
     protected void initialize() throws IOException {
         recordNum.setText(MainforUser.getGuideCount() + " record(s) found");
         int counter = 0;
