@@ -35,7 +35,7 @@
 
             <VBox alignment="CENTER" prefHeight="200.0">
                <children>
-                  <Button onAction="#aboutBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: gray;">
+                  <Button contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#aboutBtnClick" style="-fx-background-color: gray;">
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -53,7 +53,7 @@
                </HBox.margin></VBox>
             <VBox alignment="CENTER" layoutX="642.0" layoutY="10.0" prefHeight="200.0">
                <children>
-                  <Button onAction="#profileBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: lightgray;">
+                  <Button contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#profileBtnClick" style="-fx-background-color: lightgray;">
                      <graphic>
                         <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>

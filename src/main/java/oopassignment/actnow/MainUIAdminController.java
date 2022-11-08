@@ -45,9 +45,9 @@ public class MainUIAdminController {
     @FXML
     protected void readFeedbackBtnClick() throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("readfeedback-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("listfeedback-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Read Feedback (Admin-only)");
+        stage.setTitle("All Feedbacks (Admin-only)");
         stage.setScene(scene);
         stage.show();
     }

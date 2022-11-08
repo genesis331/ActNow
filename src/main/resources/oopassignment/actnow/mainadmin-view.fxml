@@ -158,7 +158,7 @@
     </HBox>
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
          <content>
-            <ListView fx:id="loopPane" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="loopPane" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" />
          </content>
     </ScrollPane>
   </children>
