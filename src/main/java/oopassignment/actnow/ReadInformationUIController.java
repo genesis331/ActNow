@@ -27,7 +27,7 @@ public class ReadInformationUIController {
         Node document = parser.parse(content);
         HtmlRenderer renderer = HtmlRenderer.builder().build();
 
-        Font.loadFont(Objects.requireNonNull(ReadInformationUIController.class.getResource("Montserrat.ttf")).toExternalForm(), 12);
+        Font.loadFont(Objects.requireNonNull(ReadInformationUIController.class.getResource("fonts/Montserrat.ttf")).toExternalForm(), 12);
         webView.getEngine().loadContent("<style>* {font-family: 'Montserrat', Arial, Helvetica, sans-serif}body{padding: 30px}</style>" + "<body>" + renderer.render(document) + "</body>");
     }
 }
