@@ -53,14 +53,14 @@ public class MainforUser {
         return listOfFiles[index].getName();
     }
 
-    public static ArrayList<String> searchGuideFilename(String searchStr) {
+    public static ArrayList<Integer> searchGuideFilename(String searchStr) {
         File folder = new File("guides");
         File[] listOfFiles = folder.listFiles();
-        ArrayList<String> searchResult = new ArrayList<>();
+        ArrayList<Integer> searchResult = new ArrayList<>();
         assert listOfFiles != null;
-        for (File listOfFile : listOfFiles) {
-            if (listOfFile.getName().contains(searchStr)) {
-                searchResult.add(listOfFile.getName());
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].getName().contains(searchStr)) {
+                searchResult.add(i);
             }
         }
         return searchResult;

@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainUIUserController {
     @FXML
@@ -80,7 +81,19 @@ public class MainUIUserController {
 
     @FXML
     protected void searchBtnClick() throws IOException {
-
+        loopPane.getItems().clear();
+        String searchStrPass = searchField.getText().replaceAll("\\s+","").toLowerCase();
+        ArrayList<Integer> searchResult = MainforUser.searchGuideFilename(searchStrPass);
+        recordNum.setText(searchResult.size() + " record(s) found");
+        for (Integer fileIndex : searchResult) {
+            FXMLLoader loader = new FXMLLoader(LoginUI.class.getResource("component-userguide.fxml"));
+            GridPane stockView = loader.load();
+            GuideUserComponentController controller = loader.getController();
+            controller.setDisasterType(MainforUser.getGuideType(fileIndex));
+            controller.setGuideTitle(MainforUser.getGuideTitle(fileIndex));
+            controller.setActionBtn(MainforUser.getGuideFilename(fileIndex));
+            loopPane.getItems().add(stockView);
+        }
     }
 
     @FXML

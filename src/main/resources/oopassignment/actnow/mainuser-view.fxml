@@ -112,7 +112,7 @@
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin></TextField>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: black;">
+                        <Button onAction="#searchBtnClick" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: black;">
                            <graphic>
                               <ImageView fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
