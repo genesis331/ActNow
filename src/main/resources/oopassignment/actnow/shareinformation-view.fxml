@@ -39,6 +39,7 @@
                   <Font name="Montserrat SemiBold" size="20.0" />
                </font>
             </Label>
+            <Label fx:id="hiddenLabel" alignment="BOTTOM_RIGHT" opacity="0.0" text="Label" />
          </children>
       </GridPane>
       <GridPane alignment="CENTER" vgap="10.0" GridPane.rowIndex="1">
@@ -51,7 +52,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: deepskyblue;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#downloadBtnClick" style="-fx-background-color: deepskyblue;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
