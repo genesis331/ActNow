@@ -32,6 +32,7 @@
                   </Label>
                </children>
             </VBox>
+
             <VBox alignment="CENTER" prefHeight="200.0">
                <children>
                   <Button onAction="#aboutBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" style="-fx-background-color: gray;">

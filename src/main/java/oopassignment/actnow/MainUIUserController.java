@@ -65,6 +65,16 @@ public class MainUIUserController {
     }
 
     @FXML
+    protected void createNewBtnClick() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("createfeedback-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("Create Feedback (User-only)");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     protected void initialize() throws IOException {
         recordNum.setText(MainforUser.getGuideCount() + " record(s) found");
         for (int i = 0; i < MainforUser.getGuideCount(); i++) {
