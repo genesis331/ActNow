@@ -150,10 +150,10 @@ public class LoginPage implements ActionListener{
 //			if(logininfo.containsKey(userID)) {
 //				if(logininfo.get(userID).equals(password)) {
 					if("ADMINISTRATOR".equals(userID)){
-						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
+						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainadmin-view.fxml"));
 						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 						primaryStage.close();
-						primaryStage.setTitle("Home Screen (User)");
+						primaryStage.setTitle("Home Screen (Admin)");
 						primaryStage.setScene(scene);
 						primaryStage.show();
 					}

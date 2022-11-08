@@ -39,13 +39,13 @@ public class MainforUser {
         return folder.exists();
     }
 
-    public static int getGuideCount() throws FileNotFoundException {
+    public static int getGuideCount() {
         File folder = new File("guides");
         File[] listOfFiles = folder.listFiles();
         return Objects.requireNonNull(listOfFiles).length;
     }
 
-    public static String getGuideFilename(int index) throws FileNotFoundException {
+    public static String getGuideFilename(int index) {
         File folder = new File("guides");
         File[] listOfFiles = folder.listFiles();
         assert listOfFiles != null;
