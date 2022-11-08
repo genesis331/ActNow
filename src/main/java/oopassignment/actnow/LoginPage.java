@@ -73,8 +73,13 @@ public class LoginPage implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource()==resetButton) {
-			userIDField.setText("");
-			userPasswordField.setText("");
+                    String userID = userIDField.getText();
+			String password = String.valueOf(userPasswordField.getPassword());
+                        
+			logininfo.remove("GUEST","guest123");
+                        logininfo.put(userID,password);
+                        
+                        
 		}
 		
 		if(e.getSource()==loginButton) {
