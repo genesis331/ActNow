@@ -136,7 +136,7 @@
           <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="456.0">
               <children>
-                <TextField prefHeight="42.0" prefWidth="434.0">
+                <TextField fx:id="searchField" prefHeight="42.0" prefWidth="434.0">
                   <HBox.margin>
                     <Insets right="10.0" />
                   </HBox.margin></TextField>

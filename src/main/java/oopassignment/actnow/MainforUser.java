@@ -2,6 +2,7 @@ package oopassignment.actnow;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 /*
@@ -50,6 +51,19 @@ public class MainforUser {
         File[] listOfFiles = folder.listFiles();
         assert listOfFiles != null;
         return listOfFiles[index].getName();
+    }
+
+    public static ArrayList<String> searchGuideFilename(String searchStr) {
+        File folder = new File("guides");
+        File[] listOfFiles = folder.listFiles();
+        ArrayList<String> searchResult = new ArrayList<>();
+        assert listOfFiles != null;
+        for (File listOfFile : listOfFiles) {
+            if (listOfFile.getName().contains(searchStr)) {
+                searchResult.add(listOfFile.getName());
+            }
+        }
+        return searchResult;
     }
     
     public static String getGuideTitle(int index) throws FileNotFoundException {

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -19,6 +20,9 @@ public class MainUIUserController {
 
     @FXML
     private Label recordNum;
+
+    @FXML
+    private TextField searchField;
 
     @FXML
     protected static void readMoreBtnClick(String filename) throws IOException {
@@ -77,15 +81,17 @@ public class MainUIUserController {
     @FXML
     protected void initialize() throws IOException {
         recordNum.setText(MainforUser.getGuideCount() + " record(s) found");
-        for (int i = 0; i < MainforUser.getGuideCount(); i++) {
+        int counter = 0;
+        do {
             FXMLLoader loader = new FXMLLoader(LoginUI.class.getResource("component-userguide.fxml"));
             GridPane stockView = loader.load();
             GuideUserComponentController controller = loader.getController();
-            controller.setDisasterType(MainforUser.getGuideType(i));
-            controller.setGuideTitle(MainforUser.getGuideTitle(i));
-            controller.setActionBtn(MainforUser.getGuideFilename(i));
-            controller.setShareBtn(MainforUser.getGuideFilename(i));
+            controller.setDisasterType(MainforUser.getGuideType(counter));
+            controller.setGuideTitle(MainforUser.getGuideTitle(counter));
+            controller.setActionBtn(MainforUser.getGuideFilename(counter));
+            controller.setShareBtn(MainforUser.getGuideFilename(counter));
             loopPane.getItems().add(stockView);
-        }
+            counter++;
+        } while (counter < MainforUser.getGuideCount());
     }
 }

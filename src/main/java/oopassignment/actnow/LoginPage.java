@@ -147,33 +147,34 @@ public class LoginPage implements ActionListener{
         }
 
 		public static void validateLogin(String userID, String password, Stage primaryStage) throws IOException {
-//			if(logininfo.containsKey(userID)) {
-//				if(logininfo.get(userID).equals(password)) {
-					if("ADMINISTRATOR".equals(userID)){
-						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainadmin-view.fxml"));
-						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+			logininfo.put("ADMINISTRATOR","admin123");
+			logininfo.put("GUEST","guest123");
+			switch (userID) {
+				case "ADMINISTRATOR" -> {
+					if(logininfo.get(userID).equals(password)) {
+						FXMLLoader fxmlLoaderAdmin = new FXMLLoader(LoginUI.class.getResource("mainadmin-view.fxml"));
+						Scene scene = new Scene(fxmlLoaderAdmin.load(), 800, 600);
 						primaryStage.close();
 						primaryStage.setTitle("Home Screen (Admin)");
 						primaryStage.setScene(scene);
 						primaryStage.show();
 					}
-					else if("GUEST".equals(userID)){
-						FXMLLoader fxmlLoader = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
-						Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+				}
+				case "GUEST" -> {
+					if(logininfo.get(userID).equals(password)) {
+						FXMLLoader fxmlLoaderUser = new FXMLLoader(LoginUI.class.getResource("mainuser-view.fxml"));
+						Scene scene = new Scene(fxmlLoaderUser.load(), 800, 600);
 						primaryStage.close();
 						primaryStage.setTitle("Home Screen (User)");
 						primaryStage.setScene(scene);
 						primaryStage.show();
 					}
-					else {
-						JFrame f = new JFrame();
-        				JOptionPane.showMessageDialog(f,"Wrong password / Username");
-					}
-//				}
-//			} else {
-//				JFrame f = new JFrame();
-//				JOptionPane.showMessageDialog(f,"Wrong password / Username");
-//			}
+				}
+				default -> {
+					JFrame f = new JFrame();
+					JOptionPane.showMessageDialog(f, "Wrong password / Username");
+				}
+			}
 		}
 }
 
